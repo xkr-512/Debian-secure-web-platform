@@ -1,0 +1,16 @@
+# Temporaires
+*~
+*.swp
+*.tmp
+*.log
+
+# Secrets / clés / tokens (NE JAMAIS PUSH)
+*.key
+*.pem
+*.p12
+*.env
+id_rsa
+id_rsa.pub
+
+# Cache
+.cache/
