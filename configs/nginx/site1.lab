@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name site1.lab;
+
+    root /var/www/site1.lab/html;
+    index index.html;
+
+    access_log /var/log/nginx/site1.lab.access.log;
+    error_log  /var/log/nginx/site1.lab.error.log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
