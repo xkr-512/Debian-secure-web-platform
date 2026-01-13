@@ -1,0 +1,15 @@
+[sudo] Mot de passe de sysadmin : 
+[0;1;32m●[0m nftables.service - nftables
+     Loaded: loaded (]8;;file://srv-web/usr/lib/systemd/system/nftables.service\/usr/lib/systemd/system/nftables.service]8;;\; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (exited)[0m since Tue 2026-01-13 20:34:53 CET; 17s ago
+ Invocation: b4702866e45041ce9dd0b4a9d3dbdb71
+       Docs: ]8;;man:nft(8)\man:nft(8)]8;;\
+             ]8;;http://wiki.nftables.org\http://wiki.nftables.org]8;;\
+    Process: 1819 ExecStart=/usr/sbin/nft -f /etc/nftables.conf (code=exited, status=0/SUCCESS)
+   Main PID: 1819 (code=exited, status=0/SUCCESS)
+   Mem peak: 1.8M
+        CPU: 41ms
+
+janv. 13 20:34:53 srv-web systemd[1]: Starting nftables.service - nfta…s...
+janv. 13 20:34:53 srv-web systemd[1]: Finished nftables.service - nftables.
+Hint: Some lines were ellipsized, use -l to show in full.
