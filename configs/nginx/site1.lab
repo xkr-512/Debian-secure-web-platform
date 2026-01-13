@@ -1,6 +1,17 @@
+# 1) HTTP -> HTTPS
 server {
     listen 80;
     server_name site1.lab;
+    return 301 https://$host$request_uri;
+}
+
+# 2) HTTPS
+server {
+    listen 443 ssl;
+    server_name site1.lab;
+
+    ssl_certificate     /etc/nginx/tls/site1.lab.crt;
+    ssl_certificate_key /etc/nginx/tls/site1.lab.key;
 
     root /var/www/site1.lab/html;
     index index.html;
