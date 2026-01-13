@@ -1,0 +1,36 @@
+#!/usr/sbin/nft -f
+
+flush ruleset
+
+table inet filter {
+  chain input {
+    type filter hook input priority 0;
+    policy drop;
+
+    # 1) Accepter le trafic déjà établi
+    ct state established,related accept
+
+    # 2) Autoriser loopback
+    iif "lo" accept
+
+    # 3) Autoriser ICMP (ping)
+    ip protocol icmp accept
+    ip6 nexthdr icmpv6 accept
+
+    # 4) Autoriser SSH
+    tcp dport 22 accept
+
+    # 5) (Option) Autoriser DHCP client (utile pour NAT)
+    udp sport 67 udp dport 68 accept
+  }
+
+  chain forward {
+    type filter hook forward priority 0;
+    policy drop;
+  }
+
+  chain output {
+    type filter hook output priority 0;
+    policy accept;
+  }
+}
