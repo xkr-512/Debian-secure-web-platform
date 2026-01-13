@@ -1,0 +1,17 @@
+[sudo] Mot de passe de sysadmin : 
+[0;1;32m●[0m nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (]8;;file://srv-web/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Tue 2026-01-13 20:38:11 CET; 21min ago
+ Invocation: 621f25ffec144aaf8e573b9e43c5f2c2
+       Docs: ]8;;man:nginx(8)\man:nginx(8)]8;;\
+   Main PID: 2089 (nginx)
+      Tasks: 2[0;38;5;245m (limit: 2303)[0m
+     Memory: 2.4M (peak: 5.2M)
+        CPU: 72ms
+     CGroup: /system.slice/nginx.service
+             ├─[0;38;5;245m2089 "nginx: master process /usr/sbin/nginx -g daemon on; m…[0m
+             └─[0;38;5;245m2091 "nginx: worker process"[0m
+
+janv. 13 20:38:11 srv-web systemd[1]: Starting nginx.service - A high …r...
+janv. 13 20:38:11 srv-web systemd[1]: Started nginx.service - A high p…ver.
+Hint: Some lines were ellipsized, use -l to show in full.
