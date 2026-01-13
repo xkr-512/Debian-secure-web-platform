@@ -1,0 +1,6 @@
+[sudo] Mot de passe de sysadmin : 
+port 22
+permitrootlogin without-password
+pubkeyauthentication yes
+passwordauthentication no
+gatewayports no
