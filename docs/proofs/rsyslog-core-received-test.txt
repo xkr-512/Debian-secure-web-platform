@@ -1,0 +1,2 @@
+[sudo] Mot de passe de sysadmin : 
+2026-01-13T21:56:10+01:00 srv-web sysadmin: TEST_SYSLOG_FORWARD from srv-web 2026-01-13T21:56:10+01:00

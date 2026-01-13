@@ -1,0 +1,4 @@
+[sudo] Mot de passe de sysadmin : 
+Désolé, essayez de nouveau.
+[sudo] Mot de passe de sysadmin : 
+*.* @192.168.56.10:514

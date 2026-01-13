@@ -1,0 +1,3 @@
+[sudo] Mot de passe de sysadmin : 
+UNCONN 0      0            0.0.0.0:514       0.0.0.0:*    users:(("rsyslogd",pid=2013,fd=6))
+UNCONN 0      0               [::]:514          [::]:*    users:(("rsyslogd",pid=2013,fd=7))
