@@ -1,0 +1,16 @@
+[sudo] Mot de passe de sysadmin : 
+=== Backup start: 2026-01-13T22:03:20+01:00 ===
+Archive: /backup/configs/srv-core-configs-2026-01-13_220320.tar.gz
+Backup OK
+=== Backup end: 2026-01-13T22:03:20+01:00 ===
+
+=== Backup start: 2026-01-13T22:06:10+01:00 ===
+Archive: /backup/configs/srv-core-configs-2026-01-13_220610.tar.gz
+Backup OK
+=== Backup end: 2026-01-13T22:06:10+01:00 ===
+
+=== Backup start: 2026-01-14T00:08:02+01:00 ===
+Archive: /backup/configs/srv-core-configs-2026-01-14_000802.tar.gz
+Backup OK
+=== Backup end: 2026-01-14T00:08:02+01:00 ===
+

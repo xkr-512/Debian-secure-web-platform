@@ -1,0 +1,2 @@
+[sudo] Mot de passe de sysadmin : 
+Thu 2026-01-15 00:00:00 CET 1h 40min Wed 2026-01-14 00:08:01 CET            - backup-configs.timer         backup-configs.service

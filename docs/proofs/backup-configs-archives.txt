@@ -1,0 +1,5 @@
+[sudo] Mot de passe de sysadmin : 
+total 12K
+-rw-r--r-- 1 root root 2,8K 13 janv. 22:03 srv-core-configs-2026-01-13_220320.tar.gz
+-rw-r--r-- 1 root root 2,8K 13 janv. 22:06 srv-core-configs-2026-01-13_220610.tar.gz
+-rw-r--r-- 1 root root 2,8K 14 janv. 00:08 srv-core-configs-2026-01-14_000802.tar.gz
