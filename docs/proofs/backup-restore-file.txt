@@ -1,0 +1,2 @@
+[sudo] Mot de passe de sysadmin : 
+-rwxr-xr-x 1 root root 760 13 janv. 21:48 /tmp/restore-test/etc/nftables.conf

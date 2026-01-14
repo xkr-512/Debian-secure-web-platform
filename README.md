@@ -19,3 +19,8 @@ Sécurité, web (vhosts/HTTPS/reverse proxy), logs centralisés, sauvegardes aut
 - `systemd/` : unités systemd (.service/.timer)
 - `scripts/` : scripts bash
 - `docs/proofs/` : preuves (sorties de commandes)
+
+## Backups (srv-core)
+- Script: `scripts/backup-configs.srv-core.sh`
+- systemd: `configs/systemd/backup-configs.service` + `.timer`
+- Restore test: extraction de `etc/nftables.conf` depuis la dernière archive vers `/tmp/restore-test/` (voir `docs/proofs/backup-restore-*`)

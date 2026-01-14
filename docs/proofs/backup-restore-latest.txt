@@ -1,0 +1,2 @@
+[sudo] Mot de passe de sysadmin : 
+/backup/configs/srv-core-configs-2026-01-14_000802.tar.gz
