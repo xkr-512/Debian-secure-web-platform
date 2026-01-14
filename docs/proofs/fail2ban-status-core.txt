@@ -1,0 +1,4 @@
+[sudo] Mot de passe de sysadmin : 
+Status
+|- Number of jail:	1
+`- Jail list:	sshd
