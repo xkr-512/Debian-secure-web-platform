@@ -1,0 +1,24 @@
+
+[Unit]
+Description=Internal HTTP App (python http.server) on srv-core
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=internalapp
+Group=internalapp
+WorkingDirectory=/opt/internal-app
+ExecStart=/usr/bin/python3 -m http.server 8080 --bind 0.0.0.0
+Restart=on-failure
+RestartSec=2
+
+# Sécurité simple
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/internal-app
+
+[Install]
+WantedBy=multi-user.target

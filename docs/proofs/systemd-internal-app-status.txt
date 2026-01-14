@@ -1,0 +1,16 @@
+[sudo] Mot de passe de sysadmin : 
+[0;1;32m●[0m internal-app.service - Internal HTTP App (python http.server) on srv-core
+     Loaded: loaded (]8;;file://srv-core/etc/systemd/system/internal-app.service\/etc/systemd/system/internal-app.service]8;;\; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Wed 2026-01-14 23:52:21 CET; 3min 50s ago
+ Invocation: 3dbc309e69b54dffa15aacbca9229e58
+   Main PID: 1886 (python3)
+      Tasks: 1[0;38;5;245m (limit: 2303)[0m
+     Memory: 9.9M (peak: 11.9M)
+        CPU: 226ms
+     CGroup: /system.slice/internal-app.service
+             └─[0;38;5;245m1886 /usr/bin/python3 -m http.server 8080 --bind 0.0.0.0[0m
+
+janv. 14 23:52:21 srv-core systemd[1]: Started internal-app.service - I…re.
+janv. 14 23:52:28 srv-core python3[1886]: 192.168.56.11 - - [14/Jan/202…0 -
+janv. 14 23:52:36 srv-core python3[1886]: 192.168.56.11 - - [14/Jan/202…0 -
+Hint: Some lines were ellipsized, use -l to show in full.
