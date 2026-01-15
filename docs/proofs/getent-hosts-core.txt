@@ -1,0 +1,2 @@
+192.168.56.11   site1.lab app.site1.lab
+192.168.56.11   site1.lab app.site1.lab

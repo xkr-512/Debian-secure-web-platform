@@ -1,0 +1,10 @@
+[sudo] Mot de passe de sysadmin : 
+Status for the jail: nginx-http-auth
+|- Filter
+|  |- Currently failed:	1
+|  |- Total failed:	6
+|  `- File list:	/var/log/nginx/error.log /var/log/nginx/site1.lab.error.log
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:	

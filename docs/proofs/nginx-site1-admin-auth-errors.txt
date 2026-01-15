@@ -1,0 +1,9 @@
+[sudo] Mot de passe de sysadmin : 
+2026/01/15 00:31:41 [crit] 2147#2147: *44 open() "/etc/nginx/.htpasswd" failed (13: Permission denied), client: 192.168.56.12, server: site1.lab, request: "GET /admin/ HTTP/1.1", host: "site1.lab"
+2026/01/15 00:48:38 [error] 2147#2147: *46 user "demo": password mismatch, client: 127.0.0.1, server: site1.lab, request: "HEAD /admin/ HTTP/1.1", host: "site1.lab"
+2026/01/15 00:57:59 [error] 2147#2147: *47 user "demo": password mismatch, client: 192.168.56.10, server: site1.lab, request: "GET /admin/ HTTP/1.1", host: "site1.lab"
+2026/01/15 00:57:59 [error] 2147#2147: *48 user "demo": password mismatch, client: 192.168.56.10, server: site1.lab, request: "GET /admin/ HTTP/1.1", host: "site1.lab"
+2026/01/15 00:57:59 [error] 2147#2147: *49 user "demo": password mismatch, client: 192.168.56.10, server: site1.lab, request: "GET /admin/ HTTP/1.1", host: "site1.lab"
+2026/01/15 00:57:59 [error] 2147#2147: *50 user "demo": password mismatch, client: 192.168.56.10, server: site1.lab, request: "GET /admin/ HTTP/1.1", host: "site1.lab"
+2026/01/15 00:57:59 [error] 2147#2147: *51 user "demo": password mismatch, client: 192.168.56.10, server: site1.lab, request: "GET /admin/ HTTP/1.1", host: "site1.lab"
+2026/01/15 00:57:59 [error] 2147#2147: *52 user "demo": password mismatch, client: 192.168.56.10, server: site1.lab, request: "GET /admin/ HTTP/1.1", host: "site1.lab"
