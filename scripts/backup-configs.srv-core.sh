@@ -6,12 +6,16 @@ TS="$(date +%F_%H%M%S)"
 ARCHIVE="${DEST}/srv-core-configs-${TS}.tar.gz"
 LOG="/var/log/backup-configs.log"
 
+# S'assure que le dossier de destination existe
+mkdir -p "$DEST"
+
 {
   echo "=== Backup start: $(date -Is) ==="
   echo "Archive: ${ARCHIVE}"
 
   tar -czf "${ARCHIVE}" \
     /etc/ssh/sshd_config \
+    /etc/ssh/sshd_config.d \
     /etc/nftables.conf \
     /etc/rsyslog.conf \
     /etc/hosts \
@@ -20,4 +24,4 @@ LOG="/var/log/backup-configs.log"
   echo "Backup OK"
   echo "=== Backup end: $(date -Is) ==="
   echo
-} | sudo tee -a "${LOG}" >/dev/null
+} >> "${LOG}" 2>&1
