@@ -1,46 +1,45 @@
-## Plateforme Web Debian sécurisée (VirtualBox)
+# Secure Debian Web Platform (VirtualBox)
 
-## Objectif
-Déployer une mini-infrastructure : serveur socle + serveur web + poste admin.
-Sécurité, web (vhosts/HTTPS/reverse proxy), logs centralisés, sauvegardes automatisées.
+## Goal
+Deploy a mini-infrastructure: a core server + a web server + an admin workstation. Security, web (vhosts/HTTPS/reverse proxy), centralized logs, automated backups.
 
 ## Architecture (3 VMs)
-- **srv-core** : socle sécurité + centralisation logs + sauvegardes
-- **srv-web** : Nginx (vhosts, HTTPS, reverse proxy)
-- **cli-admin** : poste d’administration/tests
+- **srv-core**: security baseline + centralized logging + backups  
+- **srv-web**: Nginx (vhosts, HTTPS, reverse proxy)  
+- **cli-admin**: administration / testing workstation  
 
-## Plan d’adressage (Host-Only 192.168.56.0/24)
-- srv-core : 192.168.56.10
-- srv-web  : 192.168.56.11
-- cli-admin: 192.168.56.12
+## Addressing plan (Host-Only 192.168.56.0/24)
+- **srv-core**: 192.168.56.10  
+- **srv-web**: 192.168.56.11  
+- **cli-admin**: 192.168.56.12  
 
-## Contenu du dépôt
-- `configs/` : configurations (ssh, nftables, nginx, rsyslog…)
-- `configs/systemd/` : unités systemd (.service/.timer)
-- `scripts/` : scripts bash
-- `docs/proofs/` : preuves (sorties de commandes)
+## Repository contents
+- **configs/**: configuration files (ssh, nftables, nginx, rsyslog…)  
+- **configs/systemd/**: systemd units (.service/.timer)  
+- **scripts/**: bash scripts  
+- **docs/proofs/**: proofs (command outputs)  
 
 ## Backups (srv-core)
-- Script: `scripts/backup-configs.srv-core.sh`
-- systemd: `configs/systemd/backup-configs.service` + `.timer`
-- Restore test: extraction de `etc/nftables.conf` depuis la dernière archive vers `/tmp/restore-test/` (voir `docs/proofs/backup-restore-*`)
+- Script: `scripts/backup-configs.srv-core.sh`  
+- systemd: `configs/systemd/backup-configs.service` + `.timer`  
+- Restore test: extract `etc/nftables.conf` from the latest archive to `/tmp/restore-test/` (see `docs/proofs/backup-restore-*`)  
 
 ## VMs
-- cli-admin : 192.168.56.12 (poste d’admin / tests)
-- srv-core  : 192.168.56.10 (services internes + logs + backups)
-- srv-web   : 192.168.56.11 (Nginx en frontal HTTPS + reverse proxy)
+- **cli-admin**: 192.168.56.12 (admin workstation / tests)  
+- **srv-core**: 192.168.56.10 (internal services + logs + backups)  
+- **srv-web**: 192.168.56.11 (Nginx front-end HTTPS + reverse proxy)  
 
-## Sécurité mise en place (résumé)
-- SSH : clés uniquement (PasswordAuthentication no) + fail2ban sshd
-- Firewall : nftables policy drop + ouverture minimale des ports
-- Web : HTTPS autosigné + redirection HTTP→HTTPS + headers sécurité
-- Reverse proxy : app.site1.lab → srv-core:8080 (interne)
-- /admin : BasicAuth + fail2ban nginx-http-auth (ban automatique)
+## Implemented security (summary)
+- **SSH**: keys only (`PasswordAuthentication no`) + fail2ban sshd  
+- **Firewall**: nftables default drop policy + minimal port exposure  
+- **Web**: self-signed HTTPS + HTTP→HTTPS redirect + security headers  
+- **Reverse proxy**: `app.site1.lab` → `srv-core:8080` (internal)  
+- **/admin**: BasicAuth + fail2ban nginx-http-auth (automatic ban)  
 
-## Tests rapides (preuves dans docs/proofs)
-- HTTP→HTTPS : `curl -I http://site1.lab`
-- HTTPS OK : `curl -k -I https://site1.lab`
-- Reverse proxy : `curl -k https://app.site1.lab/`
-- /admin sans creds : `curl -k -I https://site1.lab/admin/` (401)
-- /admin avec creds : `curl -k -u demo:*** https://site1.lab/admin/`
-- Ban fail2ban : après plusieurs mauvais logins → IP bannie (voir proof)
+## Quick tests (proofs in docs/proofs)
+- HTTP→HTTPS: `curl -I http://site1.lab`  
+- HTTPS OK: `curl -k -I https://site1.lab`  
+- Reverse proxy: `curl -k https://app.site1.lab/`  
+- /admin without creds: `curl -k -I https://site1.lab/admin/` (401)  
+- /admin with creds: `curl -k -u demo:*** https://site1.lab/admin/`  
+- Fail2ban ban: after several bad logins → IP banned (see proof)  
