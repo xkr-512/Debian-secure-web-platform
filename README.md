@@ -1,4 +1,4 @@
-# Projet 1 — Plateforme Web Debian sécurisée (VirtualBox)
+Plateforme Web Debian sécurisée (VirtualBox)
 
 ## Objectif
 Déployer une mini-infrastructure : serveur socle + serveur web + poste admin.
@@ -25,7 +25,7 @@ Sécurité, web (vhosts/HTTPS/reverse proxy), logs centralisés, sauvegardes aut
 - systemd: `configs/systemd/backup-configs.service` + `.timer`
 - Restore test: extraction de `etc/nftables.conf` depuis la dernière archive vers `/tmp/restore-test/` (voir `docs/proofs/backup-restore-*`)
 
-## Architecture (lab VirtualBox)
+## VMs
 - cli-admin : 192.168.56.12 (poste d’admin / tests)
 - srv-core  : 192.168.56.10 (services internes + logs + backups)
 - srv-web   : 192.168.56.11 (Nginx en frontal HTTPS + reverse proxy)
