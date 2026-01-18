@@ -16,7 +16,7 @@ Sécurité, web (vhosts/HTTPS/reverse proxy), logs centralisés, sauvegardes aut
 
 ## Contenu du dépôt
 - `configs/` : configurations (ssh, nftables, nginx, rsyslog…)
-- `systemd/` : unités systemd (.service/.timer)
+- `configs/systemd/` : unités systemd (.service/.timer)
 - `scripts/` : scripts bash
 - `docs/proofs/` : preuves (sorties de commandes)
 
