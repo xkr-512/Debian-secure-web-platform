@@ -1,4 +1,4 @@
-Plateforme Web Debian sécurisée (VirtualBox)
+## Plateforme Web Debian sécurisée (VirtualBox)
 
 ## Objectif
 Déployer une mini-infrastructure : serveur socle + serveur web + poste admin.
